@@ -17,8 +17,8 @@ namespace WebApplication1
         static int stateId = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["userId"] = null;
-            Session["userName"] = null;
+            //Session["userId"] = null;
+            //Session["userName"] = null;
             states = sellerObj.GetStates();
             cities = sellerObj.GetCities(stateId);
             if (!IsPostBack)

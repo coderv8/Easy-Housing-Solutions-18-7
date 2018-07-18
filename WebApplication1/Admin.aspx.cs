@@ -18,6 +18,10 @@ namespace WebApplication1
         static int stateId = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userId"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
             states = sellerObj.GetStates();
             cities = sellerObj.GetCities(stateId);
             if (!IsPostBack)

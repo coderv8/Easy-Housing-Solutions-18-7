@@ -100,7 +100,10 @@ namespace WebApplication1
        
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            
+            Session.Abandon();
+            Session.RemoveAll();
+            Session.Clear();
+           
             Response.Redirect("Default.aspx");
         }
     }
